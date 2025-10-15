@@ -14,9 +14,11 @@ class DoublyLinkedListIterator:
             self.iterator = newNode
             self.size = 1
         else:
+            self.iterator = self.lastNode
             newNode.antNode = self.iterator
             self.iterator.nextNode = newNode
             self.iterator = newNode
+            self.lastNode = newNode
             self.size += 1
 
     def insNode(self,data):
@@ -25,9 +27,31 @@ class DoublyLinkedListIterator:
             self.firstNode = newNode
             self.lastNode = newNode
             self.iterator = newNode
+            self.size = 1
         else:
+            self.iterator = self.firstNode
+            newNode.nextNode = self.iterator
+            newNode.antNode = None
             self.iterator.antNode = newNode
             self.iterator = newNode
+            self.firstNode = newNode
+            self.size += 1
+
+    def elimNode(self):
+        if self.size == 1:
+            self.iterator = None
+        else:
+            self.iterator.nextNode
+    
+    def first_node(self):
+        self.iterator = self.firstNode
+        return True
+
+    def last_node(self):
+        self.iterator = self.lastNode
+        return True
+    
+
             
 
     def nextNode(self):
