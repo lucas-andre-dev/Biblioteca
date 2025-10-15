@@ -23,6 +23,4 @@ O objetivo é aplicar conceitos de estrutura de dados na prática, criando um si
 - Gerencia as reservas de livros indisponíveis.  
 - Notifica automaticamente o próximo usuário quando um livro é devolvido.  
 - Usuário notificado tem **24h para efetuar o empréstimo**.  
-
-        self.nextNode = nextNode
         self.antNode = antNode
