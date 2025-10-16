@@ -7,7 +7,7 @@ class SinglyLinkedListIterator:
         self.firstNode = firstNode
         self.lastNode  = firstNode
         self.iterator  = firstNode
-        self.size = 1 if firstNode else 0
+        self.size = 0
 
     # ------------------------------------------------------
     # Adiciona um nó DEPOIS do iterador e move o iterador para ele
@@ -114,24 +114,17 @@ class SinglyLinkedListIterator:
     def isUndefinedIterator(self):
         return self.iterator is None
 
-    # ------------------------------------------------------
-    # Retorna todos os elementos da lista (não imprime)
-    # ------------------------------------------------------
-    def getLista(self):
-        elements = []
-        current = self.firstNode
-        while current:
-            elements.append(current.data)
-            current = current.getNextNode()
-        return elements
 
     # ------------------------------------------------------
     # Imprime todos os elementos da lista
     # ------------------------------------------------------
-    def printNode(self):
+    def printList(self):
         lista = self.firstNode
         print("Lista de elementos:")
         while lista:
             print(lista.data)
             lista = lista.nextNode
         print(f"Total de elementos: {self.size}")
+
+    def printNode(self):
+        return print(self.iterator.data)
