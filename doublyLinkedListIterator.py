@@ -1,4 +1,4 @@
-from node import Node
+from doublyListNode import Node
 
 class DoublyLinkedListIterator:
     def __init__(self):
